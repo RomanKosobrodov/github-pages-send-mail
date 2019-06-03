@@ -1,6 +1,6 @@
 {
   "name": "GitHub Pages send mail",
   "description": "Send mail from GitHub Pages contact page",
-  "repository": "https://github.com/heroku/php-getting-started",
+  "repository": "https://github.com/RomanKosobrodov/github-pages-send-mail",
   "addons": []
 }
