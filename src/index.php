@@ -6,7 +6,6 @@ use Monolog\Handler\StreamHandler;
 
 $log = new Logger('sendmail');
 $log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
-$log->debug(json_encode($_SERVER));
 $log->debug(json_encode($_POST));
 
 if(isset($_POST['submit'])){
