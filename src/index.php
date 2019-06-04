@@ -1,10 +1,19 @@
 <?php
 require('../vendor/autoload.php');
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
+
 if(isset($_POST['submit'])){
     $sender = $_POST['sender'];
     $emailAddress = $_POST['email'];
     $message = $_POST['message'];
     $redirectURL = $_POST['redirect'];
+
+    $log->debug($_POST);
 
     $email = new SendGrid\Mail\Mail(); 
     $email->setFrom($emailAddress, $sender);
@@ -24,5 +33,9 @@ if(isset($_POST['submit'])){
     } catch (Exception $e) {
         echo 'Caught exception: '. $e->getMessage() ."\n";
     }
+}
+else{
+   $log->debug("Submit not set");
+   exit(); 
 }
 ?>
