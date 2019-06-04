@@ -41,6 +41,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
         $log->info("Ignoring request from " . $_SERVER['HTTP_ORIGIN']);
         header('Content-Type: text/html');
         echo "Ignored";
+        exit();
     }
 }
 ?>
