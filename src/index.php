@@ -15,7 +15,9 @@ if(isset($_POST['submit'])){
     $sendgrid = new SendGrid(getenv('SENDGRID_API_KEY'));
     try {
         $response = $sendgrid->send($email);
+        $statusCode = $response->statusCode();
         header('Location: ' . $redirectURL);
+        exit();
         #print $response->statusCode() . "\n";
         #print_r($response->headers());
         #print $response->body() . "\n";
