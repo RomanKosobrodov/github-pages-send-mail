@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Form Example</title>
+  </head>
+  <body>
+    <h1>Contact</h1>
+    <div class="posts">
+      <form
+        action="https://roman-kosobrodov-github-send.herokuapp.com/"
+        method="post"
+      >
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://romankosobrodov.github.io/thanks"
+        />
+        <label for="sender">Name</label><br />
+        <input
+          class="form-control"
+          type="text"
+          name="sender"
+          size="40"
+          required
+          placeholder="Your name"
+        /><br /><br />
+        <label for="email">Email address</label><br />
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          size="40"
+          required
+          placeholder="Email"
+        /><br /><br />
+        <label for="message">Message</label><br />
+        <textarea
+          class="form-control"
+          rows="7"
+          cols="80"
+          name="message"
+          required
+        ></textarea
+        ><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
