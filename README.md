@@ -1,16 +1,16 @@
 # github-pages-send-mail
 
 Server-side PHP code for emailing contact form from GitHub pages or other site.
-The code is deployed on (Heroku)[https://heroku.com] and uses SendGrid to send emails.
+The code is deployed on [Heroku](https://heroku.com) and uses SendGrid to send emails.
 
 ## How to use
 
 ### Prerequisites
 
 You should have an account on Heroku. For a small web-site a free acount should be sufficient.
-If you are new to Heroku read their (Getting Started Guide)[https://devcenter.heroku.com/articles/getting-started-with-php].
+If you are new to Heroku read their [Getting Started Guide](https://devcenter.heroku.com/articles/getting-started-with-php).
 
-Sign up for (SendGrid)[https://sendgrid.com/] and create an API key.
+Sign up for [SendGrid](https://sendgrid.com/) and create an API key.
 
 ### Installation
 
