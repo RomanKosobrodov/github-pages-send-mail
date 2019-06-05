@@ -9,7 +9,7 @@ $log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
 $log->debug(json_encode($_POST));
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
-    if ($_SERVER['HTTP_ORIGIN'] == 'https://romankosobrodov.github.io'){
+    if ($_SERVER['HTTP_ORIGIN'] == getenv('ALLOWED_ORIGIN')){
         if(isset($_POST['submit'])){
             $sender = $_POST['sender'];
             $emailAddress = $_POST['email'];
@@ -43,5 +43,10 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
         echo "Ignored";
         exit();
     }
+} else {
+    $log->info("HTTP_ORIGIN is not set");
+    header('Content-Type: text/html');
+    echo "Ignored";
+    exit();    
 }
 ?>
