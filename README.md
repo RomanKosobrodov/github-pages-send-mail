@@ -23,7 +23,7 @@ Under application settings define the following `Config Vars`:
 ```
 ALLOWED_ORIGIN          <your domain address>
 RECIPIENT_EMAIL         <your email address>
-RECEPIENT_NAME          <your name>
+RECIPIENT_NAME          <your name>
 SENDGRID_API_KEY        <the API key that you created on SendGrid>
 ```
 
